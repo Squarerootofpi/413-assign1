@@ -1,9 +1,13 @@
 ﻿var submit = document.getElementById("submitgradepercent");
 
+/**
+ * Submition listener, just generates the gradereport
+ * */
 submit.addEventListener("click", function () {
     generateGradeReport();
 });
 
+// These are the grade weights.
 const assignmentWeight = .5;
 const groupProjectWeight = .1;
 const quizWeight = .1;
@@ -30,6 +34,9 @@ function generateGradeReport() {
     }
 }
 
+/**
+ * gets the final percent calculation, throws error if bad input.
+ * */
 function getFinalPercentCalculation() {
     let scoreAssignments = document.getElementById("Assignments").value;
     let scoreGroupProjects = document.getElementById("Group Projects").value;
@@ -76,6 +83,9 @@ function getLetterGrade(number) {
     { grade = 'E' }
     return grade;
 }
+/**
+ * These are the grade scales. 
+ */
 /*
 'A'	 93
 'A-' 90

@@ -2,13 +2,6 @@
     font-family: Arial;
 }
 
-h1, h2, h3 {
-}
-
-ol {
-
-}
-
 li {
     font-size: 18px;
 }
@@ -19,6 +12,6 @@ img {
 
 label {
     font-size: 21px;
-    width: 100px;
+    width: 200px;
     display:inline-block;
 }
