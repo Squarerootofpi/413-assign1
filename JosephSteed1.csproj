@@ -5,14 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="NewFolder\**" />
-    <Content Remove="NewFolder\**" />
-    <EmbeddedResource Remove="NewFolder\**" />
-    <None Remove="NewFolder\**" />
+    <None Remove="htmlpage.html" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="htmlpage.html" />
+    <Folder Include="Views\Calculate\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OdeToCode.UseNodeModules" Version="3.0.0" />
   </ItemGroup>
 
 </Project>

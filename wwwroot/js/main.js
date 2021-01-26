@@ -1,10 +1,12 @@
-﻿var submit = document.getElementById("submitgradepercent");
+﻿var submit = $("#submitgradepercent");
 
 /**
  * Submition listener, just generates the gradereport
  * */
-submit.addEventListener("click", function () {
+submit.click( function () { //fix this in jquery
+    console.log("starting click");
     generateGradeReport();
+    console.log("printing");
 });
 
 // These are the grade weights.
@@ -38,12 +40,16 @@ function generateGradeReport() {
  * gets the final percent calculation, throws error if bad input.
  * */
 function getFinalPercentCalculation() {
-    let scoreAssignments = document.getElementById("Assignments").value;
-    let scoreGroupProjects = document.getElementById("Group Projects").value;
-    let scoreQuizzes = document.getElementById("Quizzes").value;
-    let scoreExams = document.getElementById("Exams").value;
-    let scoreIntexs = document.getElementById("Intex").value;
-
+    let scoreAssignments = $("#Assignments").val();
+    let scoreGroupProjects = $("#GroupProjects").val();
+    let scoreQuizzes = $("#Quizzes").val();
+    let scoreExams = $("#Exams").val();
+    let scoreIntexs = $("#Intex").val();
+    console.log(scoreAssignments);
+    console.log(scoreGroupProjects);
+    console.log(scoreQuizzes);
+    console.log(scoreExams);
+    console.log(scoreIntexs);
     if (
         (!isValidGradePercent(scoreAssignments)) ||
         (!isValidGradePercent(scoreGroupProjects)) ||
@@ -105,5 +111,8 @@ function getLetterGrade(number) {
  * Currently anything less than 0 is valid: we allow greater than 100% because of extra credit. 
  * */
 function isValidGradePercent(num) {
-    return (num > 0);
+    console.log("isvalid:",num);
+    l = (num > 1 && num <= 100);
+    console.log(l);
+    return l;
 }

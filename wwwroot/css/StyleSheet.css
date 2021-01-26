@@ -4,6 +4,7 @@
 
 li {
     font-size: 18px;
+    list-style-type: none;
 }
 
 img {
@@ -14,4 +15,8 @@ label {
     font-size: 21px;
     width: 200px;
     display:inline-block;
+}
+
+#asp-validation-summary {
+    color: red;
 }
